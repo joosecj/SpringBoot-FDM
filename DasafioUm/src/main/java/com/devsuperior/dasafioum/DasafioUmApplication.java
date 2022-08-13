@@ -23,7 +23,7 @@ public class DasafioUmApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Scanner sc = new Scanner(System.in);
         Locale.setDefault(Locale.US);
-        System.out.print("Código do pedido : ");
+        System.out.print("Código do pedido: ");
         Integer code = sc.nextInt();
         System.out.print("Valor produto: ");
         Double basic = sc.nextDouble();

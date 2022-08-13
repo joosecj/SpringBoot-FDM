@@ -1,5 +1,8 @@
 package com.devsuperior.dasafioum.entities;
 
+import org.springframework.stereotype.Service;
+
+
 public class Order {
     private Integer code;
     private Double basic;
