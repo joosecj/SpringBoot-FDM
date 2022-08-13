@@ -4,7 +4,7 @@ Repositórios destinados aos desafios proposto no modulo backend do curso @DevSu
 
 ##
 
-1. [DESAFIO: Componentes e injeção de dependência.](tree/main/DasafioUm)
+1. [DESAFIO: Componentes e injeção de dependência.](https://github.com/joosecj/SpringBoot-FDM/tree/main/DasafioUm)
 
 #### 
 
