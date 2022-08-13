@@ -1,24 +1,24 @@
 package com.devsuperior.dasafioum.entities;
 
 public class Order {
-    private Long code;
+    private Integer code;
     private Double basic;
     private Double discount;
 
-    public Order(Long code) {
+    public Order() {
     }
 
-    public Order(Long code, Double basic, Double discount) {
+    public Order(Integer code, Double basic, Double discount) {
         this.code = code;
         this.basic = basic;
         this.discount = discount;
     }
 
-    public Long getCode() {
+    public Integer getCode() {
         return code;
     }
 
-    public void setCode(Long code) {
+    public void setCode(Integer code) {
         this.code = code;
     }
 
