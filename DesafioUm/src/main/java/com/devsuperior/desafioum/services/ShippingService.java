@@ -1,6 +1,6 @@
-package com.devsuperior.dasafioum.services;
+package com.devsuperior.desafioum.services;
 
-import com.devsuperior.dasafioum.entities.Order;
+import com.devsuperior.desafioum.entities.Order;
 import org.springframework.stereotype.Service;
 
 @Service

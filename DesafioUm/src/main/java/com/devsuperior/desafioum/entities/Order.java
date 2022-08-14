@@ -1,6 +1,4 @@
-package com.devsuperior.dasafioum.entities;
-
-import org.springframework.stereotype.Service;
+package com.devsuperior.desafioum.entities;
 
 
 public class Order {

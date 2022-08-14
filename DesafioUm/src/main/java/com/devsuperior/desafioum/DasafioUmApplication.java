@@ -1,7 +1,7 @@
-package com.devsuperior.dasafioum;
+package com.devsuperior.desafioum;
 
-import com.devsuperior.dasafioum.entities.Order;
-import com.devsuperior.dasafioum.services.OrderService;
+import com.devsuperior.desafioum.entities.Order;
+import com.devsuperior.desafioum.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
