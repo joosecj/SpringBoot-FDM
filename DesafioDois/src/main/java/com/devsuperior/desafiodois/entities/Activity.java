@@ -3,7 +3,9 @@ package com.devsuperior.desafiodois.entities;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_activity")
@@ -21,6 +23,9 @@ public class Activity {
 
     @OneToOne(mappedBy = "activity", cascade = CascadeType.ALL)
     private Block blocks;
+
+    @ManyToMany(mappedBy = "activities")
+    private Set<Participant> participants = new HashSet<>();
 
     public Activity() {
     }
