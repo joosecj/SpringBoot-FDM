@@ -2,6 +2,9 @@ package com.devsuperior.desafiodois.entities;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "tb_activity")
 public class Activity {
@@ -15,6 +18,9 @@ public class Activity {
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+
+    @OneToOne(mappedBy = "activity", cascade = CascadeType.ALL)
+    private Block blocks;
 
     public Activity() {
     }
