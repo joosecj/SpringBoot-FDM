@@ -21,8 +21,11 @@ public class Activity {
     @JoinColumn(name = "category_id")
     private Category category;
 
-    @OneToOne(mappedBy = "activity", cascade = CascadeType.ALL)
+    @ManyToOne
+    @JoinColumn(name = "block_id")
     private Block blocks;
+//    @OneToOne(mappedBy = "activity", cascade = CascadeType.ALL)
+//    private Block blocks;
 
     @ManyToMany(mappedBy = "activities")
     private Set<Participant> participants = new HashSet<>();
@@ -67,5 +70,9 @@ public class Activity {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Set<Participant> getParticipants() {
+        return participants;
     }
 }
