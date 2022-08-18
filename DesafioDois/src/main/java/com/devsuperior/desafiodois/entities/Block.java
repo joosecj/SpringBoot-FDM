@@ -3,8 +3,6 @@ package com.devsuperior.desafiodois.entities;
 import jakarta.persistence.*;
 
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "tb_block")
@@ -19,12 +17,9 @@ public class Block {
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant endBlock;
 
-//    @OneToOne
-//    @MapsId
-//    private Activity activity;
-
-    @OneToMany(mappedBy = "blocks")
-    private List<Activity> activities = new ArrayList<>();
+    @ManyToOne
+    @JoinColumn(name = "activity_id")
+    private Activity activity;
 
     public Block() {
     }
@@ -59,8 +54,8 @@ public class Block {
         this.endBlock = endBlock;
     }
 
-    public List<Activity> getActivities() {
-        return activities;
+    public Activity getActivity() {
+        return activity;
     }
 }
 

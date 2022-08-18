@@ -13,19 +13,19 @@ public class Activity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
+
     private String description;
+
     private Double price;
 
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
 
-    @ManyToOne
-    @JoinColumn(name = "block_id")
-    private Block blocks;
-//    @OneToOne(mappedBy = "activity", cascade = CascadeType.ALL)
-//    private Block blocks;
+    @OneToMany(mappedBy = "activity")
+    private List<Block> blocks = new ArrayList<>();
 
     @ManyToMany(mappedBy = "activities")
     private Set<Participant> participants = new HashSet<>();
@@ -74,5 +74,13 @@ public class Activity {
 
     public Set<Participant> getParticipants() {
         return participants;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public List<Block> getBlocks() {
+        return blocks;
     }
 }

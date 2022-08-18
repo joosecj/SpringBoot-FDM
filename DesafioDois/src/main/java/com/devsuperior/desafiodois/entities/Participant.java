@@ -8,10 +8,10 @@ import java.util.Set;
 @Entity
 @Table(name = "tb_participant")
 public class Participant {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
 
     @Column(unique = true)
@@ -54,5 +54,9 @@ public class Participant {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Set<Activity> getActivities() {
+        return activities;
     }
 }
