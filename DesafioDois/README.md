@@ -1,4 +1,4 @@
-<h1>DESAFIO: Componentes e injeção de dependência</h1>
+<h1>DESAFIO: Modelo de domínio e ORM</h1>
 
 **Você deve criar um projeto no Spring Boot com Java e banco de dados H2, e implementar o modelo
 conceitual conforme especificação a seguir. Além disso, você deve fazer o seeding da base de dados
