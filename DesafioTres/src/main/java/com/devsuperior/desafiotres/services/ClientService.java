@@ -32,6 +32,17 @@ public class ClientService {
         entity = clientRepository.save(entity);
         return new ClientDTO(entity);
     }
+    @Transactional(readOnly = false)
+    public ClientDTO update(Long id, ClientDTO clientDTO) {
+        Client entity = clientRepository.getReferenceById(id);
+        copyDtoToClient(clientDTO, entity);
+        return new ClientDTO(clientRepository.save(entity));
+    }
+
+    @Transactional(readOnly = false)
+    public void delete(Long id) {
+        clientRepository.deleteById(id);
+    }
 
     public void copyDtoToClient(ClientDTO clientDTO, Client entity) {
         entity.setName(clientDTO.getName());
