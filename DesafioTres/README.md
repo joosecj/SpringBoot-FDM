@@ -36,14 +36,60 @@ usar dados sem significado como “Nome 1”, “Nome 2”, etc.).
 **Seu projeto deverá tratar as seguintes exceções:**
 
 1.  Id não encontrado (para GET por id, PUT e DELETE), retornando código 404.
-
 2.  Erro de validação, retornando código 422 e mensagens customizada para cada campo inválido. As regras de validação são:
 
    - **Nome: não pode ser vazio**
+- **Data de nascimento: não pode ser data futura (dica: use @PastOrPresent)**
 
-   - **Data de nascimento: não pode ser data futura (dica: use @PastOrPresent)**
+##
 
+### Testes manuais no Postman:
 
+**Busca de cliente por id:**
+
+- ***GET /clients/1***
+
+##
+
+**Busca paginada de clientes:**
+
+- ***GET /clients?page=0&size=6&sort=name***
+
+##
+
+**Inserção de novo cliente:**
+
+- ***POST /clients***
+
+`{`
+`"name": "Maria Silva",`
+`"cpf": "12345678901",`
+`"income": 6500.0,`
+`"birthDate": "1994-07-20",`
+`"children": 2`
+`}`
+
+##
+
+**Atualização de cliente:**
+
+- ***PUT /clients/1***
+
+`{`
+`"name": "Maria Silvaaa",`
+`"cpf": "12345678901",`
+`"income": 6500.0,`
+`"birthDate": "1994-07-20",`
+`"children": 2`
+`}`
+
+##
+
+**Deleção de cliente:**
+
+- ***DELETE /clients/1***
+
+##
 
 ## Realização
 
