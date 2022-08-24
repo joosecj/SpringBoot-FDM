@@ -62,12 +62,12 @@ usar dados sem significado como “Nome 1”, “Nome 2”, etc.).
 - ***POST /clients***
 
 `{`
-`"name": "Maria Silva",`
-`"cpf": "12345678901",`
-`"income": 6500.0,`
-`"birthDate": "1994-07-20",`
-`"children": 2`
-`}`
+`"name": "Maria Silva",
+"cpf": "12345678901",
+"income": 6500.0,
+"birthDate": "1994-07-20",
+"children": 2
+}`
 
 ##
 
