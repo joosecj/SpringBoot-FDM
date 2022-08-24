@@ -1,19 +1,22 @@
 package com.devsuperior.desafiotres.dto;
 
 import com.devsuperior.desafiotres.entities.Client;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PastOrPresent;
+import jakarta.validation.constraints.Positive;
 
 import java.time.LocalDate;
 
 public class ClientDTO {
     private Long id;
+    @NotBlank(message = "Campo requerido")
     private String name;
     private String cpf;
+    @Positive(message = "Preço inválido")
     private Double income;
+    @PastOrPresent(message = "Data não pode ser futura")
     private LocalDate birthDate;
     private Integer children;
-
-    public ClientDTO(){
-    }
 
     public ClientDTO(Long id, String name, String cpf, Double income, LocalDate birthDate, Integer children) {
         this.id = id;
