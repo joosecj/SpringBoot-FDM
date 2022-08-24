@@ -10,7 +10,13 @@ Repositórios destinados aos desafios proposto no modulo backend do curso @DevSu
 
 1. [DESAFIO: Modelo de domínio e ORM](https://github.com/joosecj/SpringBoot-FDM/tree/main/DesafioDois)
 
+   ##
+
+1. [DESAFIO: CRUD de clientes](https://github.com/joosecj/SpringBoot-FDM/tree/main/DesafioTres)
+
 #### 
+
+
 
 
 
